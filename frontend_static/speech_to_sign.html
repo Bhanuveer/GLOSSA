@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Sign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">&larr; Back to Menu</a>
+        <h2>Speech to Sign Converter</h2>
+    </div>
+
+    <div class="content">
+        <div class="controls">
+            <button id="startStopBtn" onclick="toggleListening()">Start Listening</button>
+            <button id="clearBtn" onclick="clearSigns()">Clear Signs</button>
+        </div>
+        
+        <p class="recognized-text">Recognized Speech: <span id="recognizedTextDisplay"></span></p>
+
+        <div id="signImageDisplay" class="image-container">
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

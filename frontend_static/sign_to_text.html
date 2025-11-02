@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign to Text Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="header">
+        <h2>Sign to Text</h2>
+        <a href="index.html" class="back-btn">← Back to Menu</a>
+    </div>
+
+    <div class="content">
+        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Real-Time Sign Recognition</h3>
+        
+        <!-- Webcam feed (Placeholder - actual video is in the OpenCV window) -->
+        <!-- <div id="OpenCVFrame" class = "mb-6 mx-auto w-full max-w-lg bg-gray-200 rounded-xl flex items-center justify-center aspect-video shadow-inner">
+            <p class="text-gray-600 p-4">
+                Webcam Feed will appear in a separate **OpenCV Window** on your desktop after clicking Start.
+            </p>
+        </div> -->
+        <!-- Live Webcam Feed -->
+        <div class="mb-6 mx-auto w-full max-w-lg bg-gray-200 rounded-xl flex items-center justify-center aspect-video shadow-inner overflow-hidden">
+            <img id="OpenCVFrame" class="w-full h-full object-contain rounded-xl" alt="Live Camera Feed">
+        </div>
+
+
+        <div class="controls">
+            <button id="startInferenceBtn" onclick="startInference()">Start Recognition</button>
+            <button id="stopInferenceBtn" onclick="stopInference()" disabled>Stop Recognition</button>
+        </div>
+        
+        <div class="recognized-text">
+            Current Recognized Text:
+            <span id="recognizedStringDisplay" class="font-mono text-xl text-blue-600">-- Start Signing --</span>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-4">
+            *Ensure your camera is functional and the Sign Server (Port 5002) is running. Look for the separate OpenCV window after clicking 'Start'.*
+        </p>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

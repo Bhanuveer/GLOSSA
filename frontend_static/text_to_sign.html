@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Sign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">&larr; Back to Menu</a>
+        <h2>Text to Sign Converter</h2>
+    </div>
+
+    <div class="content">
+        <input type="text" id="textInput" placeholder="Enter text or words (e.g., HELLO)" oninput="convertTextToSign(this.value)">
+        <p class="instruction">Input "HELLO" or single letters like "A B C"</p>
+        
+        <div id="signDisplay" class="image-container">
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

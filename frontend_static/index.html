@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOSSA - Real-Time Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to override Tailwind and improve aesthetics */
+        :root {
+            --primary-color: #2563eb; /* Blue 600 */
+            --secondary-color: #f59e0b; /* Amber 500 */
+            --bg-color: #f9fafb; /* Gray 50 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 768px;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #6b7280; /* Gray 500 */
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-color: #f3f4f6; /* Gray 100 */
+            border-radius: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); /* Blue shadow */
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .sign-icon { color: var(--primary-color); }
+        .speech-icon { color: var(--secondary-color); }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+                width: 95%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GLOSSA Translator</h1>
+        <p>Select a mode for real-time sign language and speech translation.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Sign to Text Card -->
+            <a href="sign_to_text.html" class="card">
+                <span class="icon sign-icon">🫲</span>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Sign to Text</h3>
+                <p class="text-sm text-gray-500 mb-0">Translate sign language gestures captured by your webcam into written text in real time.</p>
+            </a>
+
+            <!-- Speech to Sign Card -->
+            <a href="speech_to_sign.html" class="card">
+                <span class="icon speech-icon">🎙️</span>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Speech to Sign</h3>
+                <p class="text-sm text-gray-500 mb-0">Convert spoken words into corresponding sign language images for visual communication.</p>
+            </a>
+            
+        </div>
+    </div>
+</body>
+</html>
